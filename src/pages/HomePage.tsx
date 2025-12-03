@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <section className="max-w-[940px] mx-auto sm:px-6 px-4">
       <HeaderTitle category="Your Favorites" />
-      <div className="flex flex-wrap sm:gap-4 gap-3 justify-center">
+      <div className="flex flex-wrap sm:gap-4 gap-3 justify-center mt-20">
         {favorites.length ? (
           favorites.map((movie) => (
             <div key={movie.id} className="flex flex-col rounded-lg">

@@ -2,7 +2,7 @@ import { ImageOff } from "lucide-react";
 
 const NotFound = () => {
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-blackr">
+    <section className="w-screen h-screen flex items-center justify-center bg-blackr">
       <div className="flex flex-col gap-1 items-center font-robotoCondensed">
         <ImageOff color="white" size={500} />
         <h3 className="sm:text-2xl xs:text-xl text-lg mt-2 text-gray-50 font-medium">
@@ -12,7 +12,7 @@ const NotFound = () => {
           We can't seem to find the page you are looking for
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
