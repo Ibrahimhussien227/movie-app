@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&family=Montserrat:wght@300;400;500;600;700&&family=Roboto+Condensed:wght@400;700&display=swap");
+@import "tailwindcss";
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @apply bg-black;
+}
+
+.no-scroll {
+  position: fixed;
+  inline-size: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-track {
+  background: #464646;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 25px;
+}
+@layer components {
+  header {
+    @apply md:py-[16px] py-[14.5px]  w-full z-10 transition-all duration-50;
+
+    nav {
+      @apply flex items-center justify-around flex-row mx-auto md:px-8 sm:px-6 px-4 xl:px-0;
+
+      ul {
+        @apply flex space-x-8 flex-row gap-8 capitalize text-sm font-medium;
+
+        li {
+          @apply text-white relative;
+
+          span {
+            @apply transition-colors duration-300 hover:text-white;
+          }
+
+          .underline {
+            @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
+          }
+        }
+      }
+    }
+  }
+
+  .cover-detail-page {
+    @apply bg-linear-to-t from-white via-black/70 to-black/40 bg-cover bg-top;
+  }
+
+  .button-load-more {
+    @apply bg-[#ff0000] text-gray-50 hover:-translate-y-1 transition-all duration-300 font-medium my-4 cursor-pointer;
+  }
+}
