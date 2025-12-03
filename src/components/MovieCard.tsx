@@ -21,8 +21,6 @@ const MovieCard = ({ movie, category = "movie" }: MovieCardProps) => {
     name,
   } = movie;
 
-  console.log(movie);
-
   const dispatch = useDispatch();
   const favorites = useSelector(
     (state: RootState) => state.favorites.list
