@@ -21,6 +21,8 @@ const MovieCard = ({ movie, category = "movie" }: MovieCardProps) => {
     name,
   } = movie;
 
+  console.log(movie);
+
   const dispatch = useDispatch();
   const favorites = useSelector(
     (state: RootState) => state.favorites.list
@@ -38,7 +40,8 @@ const MovieCard = ({ movie, category = "movie" }: MovieCardProps) => {
       >
         {poster_path ? (
           <img
-            src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w185/${poster_path}`}
+            loading="lazy"
             alt={title}
             className="sm:w-70 w-full h-full sm:h-105 object-cover rounded-lg drop-shadow-md shadow-md group-hover:shadow-none group-hover:drop-shadow-none transition-all duration-300 ease-in-out group-hover:scale-105"
           />
@@ -53,9 +56,9 @@ const MovieCard = ({ movie, category = "movie" }: MovieCardProps) => {
       </Link>
       <div className="px-3 pt-3 flex flex-row justify-between items-center">
         <div className="">
-          <h4 className="text-white text-lg font-medium truncate max-w-[150px]">
+          <p className="text-white text-lg font-medium truncate max-w-[150px]">
             {title}
-          </h4>
+          </p>
           <p className="text-gray-400">{releaseDate}</p>
         </div>
         <Heart
